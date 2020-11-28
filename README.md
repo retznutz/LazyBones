@@ -7,4 +7,10 @@ Once setup, rip open your remote for the device you want to control and hardwire
 
 
 ## Home Automation
-I'm using Hubitat
+I'm using Hubitat, so the first drivers will be for the Hubitat system
+
+
+## Why?
+I have a couple of very nice light systems that I own that I want to have automated.  The remotes are propriatary and realtivly inexpensive, so ripping one open and wiring it up was the only way I could think of making it work.
+
+Using a Raspberry Pi Zero is a low cost networked solution that I can run node on.  I considered Arduino, but by the time you add on Wifi the cost is more than a Pi Zero.
