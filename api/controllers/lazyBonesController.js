@@ -21,9 +21,11 @@ exports.off = function (req, res) {
 
 exports.momentary = function (req, res) {
     var pin = req.params.pinNumber;
-    console.log('Momentary push');
+    var delayAmount = parseInt(req.params.delayAmount);
+
+    console.log('Momentary push.  Delay: ' + delayAmount);
     pinOn(pin);
-    setTimeout(pinOff, 500, pin);
+    setTimeout(pinOff, delayAmount, pin);
 
     res.json(true);
 };

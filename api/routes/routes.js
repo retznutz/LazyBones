@@ -8,7 +8,7 @@ module.exports = function(app) {
   app.route('/device/off/:pinNumber')
     .get(lazyBones.off);
 
-    app.route('/device/momentary/:pinNumber')
+    app.route('/device/momentary/:pinNumber/:delayAmount')
     .get(lazyBones.momentary);
 
 };
