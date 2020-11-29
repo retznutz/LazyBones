@@ -73,44 +73,38 @@ def refresh() {
 def pushButtonMomentary(pin){
     try {
         httpGet(apiUrl + "/device/momentary/" + pin + "/" + delayAmount)		{ resp ->
-            log.error "Pin" + resp?.data;
             if (resp?.data == true)
-                log.error "Pin was set to 1";
+                log "Pin" + pin + " was set pushed";
             else
-                log.error "Pin was not set to 1";
+                log.error "Pin was not set to 1 then 0";
         }
 	} catch (e) { 
         log.error "httpGet call failed ${e}" 
     }
-
 }
 
 def pushButtonOn(pin){
     try {
         httpGet(apiUrl + "/device/on/" + pin)		{ resp ->
-            log.error "Pin" + resp?.data;
             if (resp?.data == true)
-                log.error "Pin was set to 1";
+                log "Pin" + pin + " was set on";
             else
                 log.error "Pin was not set to 1";
         }
 	} catch (e) { 
         log.error "httpGet call failed ${e}" 
     }
-
 }
-
 
 def pushButtonOff(pin){
     try {
         httpGet(apiUrl + "/device/off/" + pin)		{ resp ->
             if (resp?.data == true)
-                log.error "Pin was set to 0";
+                log "Pin" + pin + " was set off";
             else
                 log.error "Pin was not set to 0";
         }
 	} catch (e) { 
         log.error "httpGet call failed ${e}" 
     }
-
 }

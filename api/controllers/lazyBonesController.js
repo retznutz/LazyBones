@@ -35,7 +35,7 @@ function pinOn(pinNumber) {
     if (Gpio.accessible) {
         const pinGpio = new Gpio(pinNumber, 'out');
         pinGpio.writeSync(1)
-        pinGpio.unexport();
+       // pinGpio.unexport();
         console.log('Pin on GPIO: ' + pinNumber);
     }else{
         console.log('Pin on, no GPIO: ' + pinNumber);
@@ -47,7 +47,7 @@ function pinOff(pinNumber) {
     if (Gpio.accessible) {
         const pinGpio = new Gpio(pinNumber, 'out');
         pinGpio.writeSync(0)
-        pinGpio.unexport();
+       // pinGpio.unexport();
         console.log('Pin off GPIO: ' + pinNumber);
     }else{
         console.log('Pin off, no GPIO: ' + pinNumber);
